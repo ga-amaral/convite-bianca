@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá Revelação - Theodoro ou Ana Luísa? 💙💗</title>
+    
+    <!-- SEO & Metatags -->
+    <meta name="description" content="Venha descobrir com a gente se quem está chegando é o Theodoro ou a Ana Luísa! Um momento especial da Bianca e do Luis Felipe.">
+    <meta name="author" content="Gabriel Amaral">
+    
+    <!-- Open Graph (WhatsApp/Social Media) -->
+    <meta property="og:title" content="Convite Especial: Chá Revelação 🧸✨">
+    <meta property="og:description" content="Theodoro ou Ana Luísa? Venha celebrar esse momento único conosco!">
+    <meta property="og:image" content="/assets/bg_hero.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <span class="badge">Chá Revelação</span>
+                    <h1>Um bebê está a caminho e a curiosidade está no ar! 💙💗</h1>
+                    <p class="subtitle">Venha descobrir com a gente se quem está chegando é o Theodoro ou a Ana Luísa e celebrar esse momento tão especial.</p>
+                </div>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container" data-aos="fade-up" data-aos-delay="200">
+                <div id="countdown" class="countdown">
+                    <!-- Gerado via JS -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Event Info Section -->
+        <section class="event-info">
+            <div class="container">
+                <div class="card-grid">
+                    <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon">📅</div>
+                        <h3>Data</h3>
+                        <p>02/05/2026</p>
+                    </div>
+                    <div class="info-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon">⏰</div>
+                        <h3>Horário</h3>
+                        <p>14h00</p>
+                    </div>
+                    <div class="info-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="icon">📍</div>
+                        <h3>Local</h3>
+                        <p>Rua Francisco Gramuglia, nº 65<br>Recreio do Hawai</p>
+                    </div>
+                </div>
+                
+                <div class="cta-wrapper">
+                    <a href="#rsvp" class="btn btn-primary">Confirmar Presença ✨</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="rsvp-section">
+            <div class="container">
+                <div class="form-container" data-aos="fade-up">
+                    <h2>Confirme sua presença</h2>
+                    <p class="section-subtitle">Sua presença vai deixar esse momento ainda mais especial! ✨</p>
+                    
+                    <form id="rsvp-form" class="modern-form">
+                        <div class="form-group">
+                            <label for="full_name">Nome completo *</label>
+                            <input type="text" id="full_name" name="full_name" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone / WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests_count">Quantas pessoas virão?</label>
+                                <select id="guests_count" name="guests_count" required>
+                                    <option value="1">Só eu</option>
+                                    <option value="2">Eu mais uma pessoa</option>
+                                    <option value="3">Eu mais duas pessoas</option>
+                                    <option value="4">Eu mais três pessoas</option>
+                                    <option value="5">Eu mais quatro pessoas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="attendance">Vai comparecer?</label>
+                                <select id="attendance" name="attendance" required>
+                                    <option value="Sim" selected>Sim</option>
+                                    <option value="Talvez">Talvez</option>
+                                    <option value="Não">Não</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="btn btn-submit">
+                            Confirmar Agora 💙💗
+                        </button>
+                    </form>
+                    
+                    <div id="form-feedback" class="form-feedback hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>Com carinho, <strong>Bianca & Luis Felipe</strong></p>
+            <div class="authorship">
+                Desenvolvido por <a href="https://instagram.com/sougabrielamaral" target="_blank" rel="noopener">Gabriel Amaral</a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script type="module" src="/main.js"></script>
+    
+    <!-- AOS Animate On Scroll (via CDN para leveza) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html>
