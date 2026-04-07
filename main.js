@@ -89,11 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
+                const responseData = await response.json();
+                const fraldaTamanho = responseData?.[0]?.Fralda || '';
+
                 const formContainer = document.querySelector('.form-container');
                 formContainer.querySelector('h2').style.display = 'none';
                 formContainer.querySelector('.section-subtitle').style.display = 'none';
                 rsvpForm.style.display = 'none';
-                feedback.innerHTML = "Obrigada por confirmar sua presença! A Bianca e o Felipe estão muito felizes em contar com você nesse momento especial.<br><br>O bebê liberou a festa, mas vetou o álcool 🚫😅. Se quiser, pode trazer seu kit cooler!";
+                feedback.innerHTML = `
+                    <div class="success-message">
+                        <p>Obrigada por confirmar sua presença! A Bianca e o Felipe estão muito felizes em contar com você nesse momento especial.</p>
+                        <p>O bebê liberou a festa, mas vetou o álcool 🚫😅. Se quiser, pode trazer seu kit cooler!</p>
+                    </div>
+                    <div class="gift-suggestion">
+                        <p><strong>Sugestão de presente:</strong></p>
+                        <p>Fralda + Um mimo</p>
+                        <p>Tamanho Sugerido: ${fraldaTamanho}</p>
+                    </div>
+                `;
                 feedback.className = 'form-feedback success';
                 feedback.classList.remove('hidden');
                 submitBtn.innerHTML = 'Confirmado! 💙💗';
