@@ -6,7 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Countdown Timer
-    const targetDate = new Date('2026-05-02T14:00:00').getTime();
+    const targetDate = new Date('2026-05-02T13:00:00').getTime();
     const countdownElement = document.getElementById('countdown');
 
     const updateCountdown = () => {
