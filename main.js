@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 rsvpForm.style.display = 'none';
                 feedback.innerHTML = `
                     <div class="success-message">
-                        <p>Obrigada por confirmar sua presença! A Bianca e o Felipe estão muito felizes em contar com você nesse momento especial.</p>
+                        <p>Obrigada por confirmar sua presença! A Mamãe e o Papai estão muito felizes em contar com você nesse momento especial.</p>
                         <p>O bebê liberou a festa, mas vetou o álcool 🚫😅. Se quiser, pode trazer seu kit cooler!</p>
                     </div>
                     <div class="gift-suggestion">
