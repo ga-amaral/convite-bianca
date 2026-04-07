@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         payload.timestamp = new Date().toLocaleString('pt-BR');
 
         try {
-            const response = await fetch('https://n8n.globalportfolio.com.br/webhook/bia', {
+            const response = await fetch('https://n8n.globalportfolio.com.br/webhook/convite-bia', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
