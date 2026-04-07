@@ -50,16 +50,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const rsvpForm = document.getElementById('rsvp-form');
     const feedback = document.getElementById('form-feedback');
     const submitBtn = document.getElementById('submit-btn');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalMessage = document.getElementById('modal-message');
+    const modalClose = document.getElementById('modal-close');
+
+    const showModal = (message) => {
+        modalMessage.textContent = message;
+        modalOverlay.classList.remove('hidden');
+    };
+
+    const hideModal = () => {
+        modalOverlay.classList.add('hidden');
+    };
+
+    modalClose.addEventListener('click', hideModal);
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) hideModal();
+    });
 
     rsvpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // UI Feedback - Desabilitar botão e mostrar status
         submitBtn.disabled = true;
         submitBtn.innerHTML = 'Enviando... ✨';
         feedback.classList.add('hidden');
 
-        // Capturar dados
         const formData = new FormData(rsvpForm);
         const payload = Object.fromEntries(formData.entries());
         payload.timestamp = new Date().toLocaleString('pt-BR');
@@ -74,17 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                // Sucesso
-                feedback.innerHTML = "Obrigada por confirmar sua presença! A Bianca e o Luis Felipe estão muito felizes em contar com você nesse momento especial.";
+                const formContainer = document.querySelector('.form-container');
+                formContainer.querySelector('h2').style.display = 'none';
+                formContainer.querySelector('.section-subtitle').style.display = 'none';
+                rsvpForm.style.display = 'none';
+                feedback.innerHTML = "Obrigada por confirmar sua presença! A Bianca e o Felipe estão muito felizes em contar com você nesse momento especial.<br><br>O bebê liberou a festa, mas vetou o álcool 🚫😅. Se quiser, pode trazer seu kit cooler!";
                 feedback.className = 'form-feedback success';
                 feedback.classList.remove('hidden');
-                rsvpForm.reset();
                 submitBtn.innerHTML = 'Confirmado! 💙💗';
             } else {
                 throw new Error('Falha no envio');
             }
         } catch (error) {
-            // Erro
             console.error('Erro RSVP:', error);
             feedback.innerHTML = "Ocorreu um erro ao enviar sua confirmação. Tente novamente em alguns instantes.";
             feedback.className = 'form-feedback error';

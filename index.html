@@ -6,7 +6,7 @@
     <title>Chá Revelação - Theodoro ou Ana Luísa? 💙💗</title>
     
     <!-- SEO & Metatags -->
-    <meta name="description" content="Chá Revelação: Theodoro ou Ana Luísa? Venha descobrir com a gente esse momento especial da Bianca e do Luis Felipe!">
+    <meta name="description" content="Chá Revelação: Theodoro ou Ana Luísa? Venha descobrir com a gente esse momento especial da Bianca e do Felipe!">
     <meta name="author" content="Gabriel Amaral">
     <link rel="icon" type="image/png" href="/favicon.png">
     
@@ -38,7 +38,7 @@
                 <div class="hero-content" data-aos="fade-up">
                     <span class="badge">Chá Revelação</span>
                     <h1>Um bebê está a caminho e a curiosidade está no ar! 💙💗</h1>
-                    <p class="subtitle">Venha descobrir com a gente se quem está chegando é o Theodoro ou a Ana Luísa e celebrar esse momento tão especial.</p>
+                    <p class="subtitle">O papai Felipe e a mamãe Bianca te convidam para descobrir com a gente se quem está chegando é o Theodoro ou a Ana Luísa e celebrar esse momento tão especial.</p>
                 </div>
             </div>
             
@@ -95,26 +95,13 @@
                             <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
                         </div>
                         
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="guests_count">Quantas pessoas virão?</label>
-                                <select id="guests_count" name="guests_count" required>
-                                    <option value="1">Só eu</option>
-                                    <option value="2">Eu mais uma pessoa</option>
-                                    <option value="3">Eu mais duas pessoas</option>
-                                    <option value="4">Eu mais três pessoas</option>
-                                    <option value="5">Eu mais quatro pessoas</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="attendance">Vai comparecer?</label>
-                                <select id="attendance" name="attendance" required>
-                                    <option value="Sim" selected>Sim</option>
-                                    <option value="Talvez">Talvez</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label for="attendance">Vai comparecer?</label>
+                            <select id="attendance" name="attendance" required>
+                                <option value="Sim" selected>Sim</option>
+                                <option value="Talvez">Talvez</option>
+                                <option value="Não">Não</option>
+                            </select>
                         </div>
                         
                         <button type="submit" id="submit-btn" class="btn btn-submit">
@@ -129,11 +116,19 @@
 
         <!-- Footer -->
         <footer class="main-footer">
-            <p>Com carinho, <strong>Bianca & Luis Felipe</strong></p>
+            <p>Com carinho, <strong>Bianca & Felipe</strong></p>
             <div class="authorship">
                 Desenvolvido por <a href="https://instagram.com/sougabrielamaral" target="_blank" rel="noopener">Gabriel Amaral</a>
             </div>
         </footer>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
     </div>
     
     <!-- Scripts -->
